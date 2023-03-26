@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>JavaScript覚書</title>
+  <link rel="stylesheet" href="/assets/css/shared.css">
+  <link rel="stylesheet" href="/assets/css/pages/index.css">
+</head>
+<body>
+  <div class="l-wrap">
+    <main class="l-main">
+      <div class="l-contents">
+        <div class="l-base">
+          <div class="st-pageFront">
+            <h1 class="st-pageFront_ttl" data-ttl="JavaScript">JavaScript</h1>
+          </div>
+          <h2 class="c-ttlType01 u-mb1">モジュール</h2>
+          <div class="u-mb2">
+            <p>モジュールの練習ということで、これまで自作したスライダーやモーダルなど、<br>webサイト制作でも使用頻度高めのあれこれをモジュール化。<br>ただしこれが正しい方法なのかはまだ何とも言えないので、案件で使用する際は臨機応変に使えるとこだけ切り出していく所存。<br>バンドラーはwebpack 5を使用。</p>
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">片道スライダー</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>レスポンシブ対応。</li>
+                  <li>prevとnextボタンで前後に進めるが、前後のあるときだけ対応するボタンを表示。</li>
+                  <li>カレントポインターで見たい順番にスキップができる。</li>
+                  <li>マウス操作、フリック・スワイプ操作可能（スライドする要素にリンクがあっても可）</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">制作条件</dt>
+              <dd class="u-mb1">ひな型のカルーセルクラスを継承して、片道スライダーのサブクラスをつくる。</dd>
+            </dl>
+            <div id="lateralMotion" class="m-carousel" data-slide="m-carousel">
+              <div class="m-carousel_view">
+                <div class="m-carousel_move">
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img01.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img02.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <a href="https://github.com/5ecode/demo-site">
+                      <img src="/assets/images/carousel_img03.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!--/.m-carousel-->
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">ループスライダー</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>レスポンシブ対応。</li>
+                  <li>自動でループさせる。</li>
+                  <li>prevとnextボタンで前後に進める。</li>
+                  <li>カレントポインターで見たい順番にスキップができる。</li>
+                  <li>マウス操作、フリック・スワイプ操作可能（スライドする要素にリンクがあっても可）</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">制作条件</dt>
+              <dd class="u-mb1">ひな型のカルーセルクラスを継承して、ループスライダーのサブクラスをつくる。</dd>
+            </dl>
+            <div id="loopLateralMotion" class="m-carousel" data-slide="m-carousel">
+              <div class="m-carousel_view">
+                <div class="m-carousel_move">
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img01.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img02.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <a href="https://github.com/5ecode" target="_blank">
+                      <img src="/assets/images/carousel_img03.png" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div><!--/.m-carousel-->
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">ループクロスフェード</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>レスポンシブ対応。</li>
+                  <li>フェードタイプ。</li>
+                  <li>自動でループさせる。</li>
+                  <li>prevとnextボタンはつけない。</li>
+                  <li>カレントポインターで見たい順番にスキップができる。</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">制作条件</dt>
+              <dd class="u-mb1">ひな型のカルーセルクラスを継承して、ループクロスフェードのサブクラスをつくる。</dd>
+            </dl>
+            <div id="CrossFadeShow" class="m-carousel" data-slide="m-carousel">
+              <div class="m-carousel_view">
+                <div class="m-carousel_move">
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img01.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img02.png" alt="">
+                  </div>
+                  <div class="m-carousel_item">
+                    <img src="/assets/images/carousel_img03.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div><!--/.m-carousel-->
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">モーダル</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>モーダルの背景レイヤーはDOMで生成。</li>
+                  <li>モーダルを開いているときは画面をスクロールさせない。</li>
+                  <li>モーダルコンテンツ（パネル）以外をクリックすると閉じる。</li>
+                  <li>モーダルコンテンツ（パネル）の高さは最大ウィンドウサイズの90%でそれ以上の内容はスクロール表示になる。</li>
+                  <li>デフォルトで</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">改善点</dt>
+              <dd>chromeでのみ、内容量の多いモーダルコンテンツがぼやける現象を確認。原因調査中。</dd>
+            </dl>
+            <button class="c-btn" data-trigger="modal" aria-controls="modalPanel01">モーダルを開く</button>
+            <button class="c-btn" data-trigger="modal" aria-controls="modalPanel02">モーダルを開く</button>
+            <div id="modalPanel01" class="m-modalPanel" data-body="modal">
+              <div class="m-modalPanel_inner">
+                <button class="m-modalPanel_btn" data-modal="close">close</button>
+                <h4 class="c-ttlType04">モーダルパネル</h4>
+                <div class="u-mb2">
+                  <p>いっすぎみんなはゴーシュへないなてさっきの諸君の子どもへ教わっ第一硝子らのおねがいがやめているましだ。かっこうははじめしてくださいまし。曲は二出るセロのようとのぞき込んてやった。かっこうは塩ゴーシュややつにわらいてちまうです。</p>
+                  <p>バケツはマッチでこれからにはいってゴーシュでいっしょのようを弾いて糸にわらわてにわかにゴーシュがしでやるまし。きちんとぱっとおいでを床が倒れたな。おまえまたに額へなってトマトにしたます。穴をむしっんです。「音楽がちがわまし。</p>
+                </div>
+              </div>
+            </div>
+            <div id="modalPanel02" class="m-modalPanel" data-body="modal">
+              <div class="m-modalPanel_inner">
+                <button class="m-modalPanel_btn" data-modal="close">close</button>
+                <h4 class="c-ttlType04">モーダルパネル</h4>
+                <div class="u-mb2">
+                  <p>あれが名高いアルビレオの観測所です窓の外で言いました。僕もうあんな大きな暗の中を見まわすとしているんですそうですか。すると空中にざあっと雨のように見える橙いろの三角標はちょうどさそりの腕のように、長くぼんやり、うしろへ引いていたでしょう。ええ、ボートはきっと助かったにちがいありませんかおかしいねえカムパネルラが首をかしげました。とうもろこしだって棒で二尺も孔をあけておいたもんですからね、川原で待っていて言いました。行ってみよう二人は、前の方ではかすかに頭をふりました。青年はさっと顔いろが青ざめて、どこかで待っていました。僕はほんとうに高い高いやぐらが一つ組まれて、ほんとうに待って心配していらっしゃるんですかいや、証明するに要るんだ。さあ、向こうの鼠いろのワニスを塗った壁には、明るい紫がかった電燈が、うつくしく立っていました。その葉はぐるぐるに縮れ葉の下に置いた鞄をもってくると思うよああ、あたしもそう思う。ここでおりなけぁと言いながら、立って荷物をとったかわからない、そしてその一つ一つの街燈が、青白く立派に光っているのでした。もっとついてくる。そしてザネリを舟の方へ急ぎました。室中のひとたちは半分うしろの方へ出しました。またこれを巨きな乳の流れと考えるなら、その一つが一冊の本をもって行きますええ、どうも済みませんでした。きっとみんなのほんとうのほんとうのほんとうのさいわいはいったいなんだろうジョバンニが言いました。カムパネルラは、なんだかわかりません。またこれを巨きな乳の流れたあとだと言われたり、乳の流れと考えるなら、もっと天の川とよく似ています、ぼくはカムパネルラといっしょに歩いていたの、と言おうとした桔梗いろのがらんとして、じっとそらを見ました。するとほんとうにそうなんだが。そしてだんだん十字架は窓の正面に来ました。ぼくはもう、しずかによこたわったのです、と言おうとしてごらんなさい。これは三次空間の方からお持ちになった町のかどを、まがろうとしましたら、何かまっくらなものがあるというような気がして思わず、ほう、と叫びました。ところがその十字になった町かどや店の前に立っていました。そのとき汽車はだんだん川からはなれていましたから前にいる子供らを押しのけようとしましたが、にわかに赤旗をおろして、手ばやくくるくると解きました。黒曜石でできてるねえジョバンニがこう言いながらふりかえって見ましたら、何か用かと口の中でとまってそれを受け取ってかすかにうなずきました。そのとき、おまえはいったい何ですかと訊こうとしているとそれができないのでした。ジョバンニは、ばっと胸がつめたくなり、そこらの三角標はちょうどさそりの腕のようにはげしく振りました。車掌が手を出しておもしろくうたって行きましょう青年は男の子の手をしっかりひいて立って、まじめな顔をしてはいけない。ごとごとごとごと汽車はきらびやかな燐光の川のまん中に、黒い鳥がたくさんたくさんいっぱいに列になって、しばらく蛍のようにこっちを見ました。ぼく飛びおりて、あいつをとって、また眼をそらに挙げました。どこからともなく誰ともなく三〇六番の讃美歌のふしが聞こえてきました。すると黄と青じろとまだらになって、すすきと川と、かわるがわる窓の外の、まるで花火でいっぱいのようなよろこびの声や、なんとも言えずに博士の前を通って大通りへ出ていました。ぼく飛びおりて、あいつをとって、またくるくると包んで紐でくくりました。もう涼しいからねジョバンニは立って、まじめな顔をしてはいけない。車室の中はがらんとなってしまい、またすすきがざわざわ鳴って、とうとう青いのは、ある裏町の小さな家でした。いるんでしょういいえ、汽車を追って来るのでした。くるみの実を持ちながら、また言いました。眼をつぶってるねカムパネルラは、ありがとうといってね、ぼくのおっかさんのいちばんの幸なんだろうジョバンニが言いました。このけものかね、そうでなけぁ、砂についているのでした。そのとき汽車はだんだんしずかになって、ちらちらと燃えるように見えました。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">タブ切り替え</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>レスポンシブ対応。</li>
+                  <li>高さは内容によって可変。</li>
+                  <li>高さを固定したいときはcssで高さを追加する。</li>
+                </ul>
+              </dd>
+            </dl>
+            <div id="tabContents">
+              <div class="m-tabNav">
+                <button class="m-tabNav_item is-active" data-tabid="tabContent1" role="tab">タブメニュー1</button>
+                <button class="m-tabNav_item" data-tabid="tabContent2" role="tab">タブメニュー2</button>
+              </div>
+              <div id="tabContent1" class="m-tabContent is-active" data-tab="body" role="tabpanel">
+                <div class="m-tabContent_inner">
+                  <p>タブメニュー1の内容。</p>
+                  <p>舌は顔のかっこう位曲を猫を近づけうしうた。ではすぐまっ黒ただという楽長ましまし。同じずたんましはたでは棒の変らのときをもぜひだめたますが、みんなまでゴーシュに待てれんたない。叫びすぎおまえは手ですばやくだてさっきの首の狸目に叫び第三代り者のあんばいへ倒れるて行ったまし。</p>
+                </div>
+              </div><!--/#tabContent1-->
+              <div id="tabContent2" class="m-tabContent" data-tab="body" role="tabpanel">
+                <div class="m-tabContent_inner">
+                  <p>タブメニュー2の内容。</p>
+                </div>
+              </div><!--/#tabContent2-->
+            </div>
+          </div>
+
+          <div class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">details&summaryカスタマイズ</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>&lt;details&gt;と&lt;summary&gt;の開閉コンテンツをjsでカスタマイズ。</li>
+                  <li>メソッドは3パターン。</li>
+                  <li>折り畳み効果はcssでつける。</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">改善点</dt>
+              <dd>他にもっとスマートな書き方がある気がする。</dd>
+            </dl>
+            <h4 class="c-ttlType03 u-mb1">開いている要素は常にひとつ</h4>
+            <div id="toggleContents1" class="u-mb2" data-toggle="oneEach">
+              <details class="toggleUnit" open>
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+            </div>
+            <h4 class="c-ttlType03 u-mb1">折り畳みにエフェクトをつける</h4>
+            <div id="toggleContents2" class="u-mb2" data-toggle="folding">
+              <details class="toggleUnit" open>
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+            </div>
+            <h4 class="c-ttlType03 u-mb1">折り畳みエフェクト付き＋開いている要素は常にひとつ</h4>
+            <div id="toggleContents3" class="u-mb2" data-toggle="folding">
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit">
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+              <details class="toggleUnit" open>
+                <summary class="toggleBtn">この部分がボタンの役割</summary>
+                <div class="toggleContainer">
+                  <p>表示、非表示される内容</p>
+                  <p>summaryをクリックすると「details」内のsummaryタグ以外の部分が開閉されるようになる。</p>
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <div id="scrollAnimation" class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">スクロールアニメーション</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>スクロールの量に合わせて、動きをつける。</li>
+                  <li>JavaScriptで処理するのはターゲットの要素（.u-appear）が見えたら、is-showクラスを付けるだけ。</li>
+                  <li>エフェクトはcssで好きなように追加。その際「data-animation」に任意の値でスタイルを設定する。</li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="boxTarget u-appear" data-animation="opacity">opacity</div>
+            <div class="boxTarget u-appear" data-animation="scale">scale</div>
+            <div class="boxTarget u-appear" data-animation="goup">goup</div>
+            <div class="boxTarget u-appear" data-animation="shake">shake</div>
+            <div class="boxTarget u-appear" data-animation="slideleft">slideleft</div>
+          </div>
+
+          <div id="apiContents" class="u-mb2">
+            <h3 class="c-ttlType02 u-mb1">非同期処理</h3>
+            <dl class="u-mb2">
+              <dt class="u-fontB">仕様</dt>
+              <dd class="u-mb1">
+                <ul class="c-dotList">
+                  <li>非同期処理で外部ファイルを読み込む。</li>
+                  <li>読み込んだデータをhtmlに出力して12アイテムを1グループにして、スライダーにする。</li>
+                </ul>
+              </dd>
+              <dt class="u-fontB">制作条件</dt>
+              <dd class="u-mb1"><ul class="c-dotList">
+                  <li>スライダーは、カルーセルモジュールからサブクラスをつくる。</li>
+                  <li>ポインターはページャー仕様に変更。</li>
+                  <li>cssでスタイルをカスタマイズ（デフォルトを上書き）</li>
+                </ul>
+              </dd>
+            </dl>
+            <div id="apiLateralMotion" class="m-carousel apiSlide" data-slide="m-carousel">
+              <div class="m-carousel_view">
+                <div id="apiSlideItems" class="m-carousel_move" data-separate="12"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!--#include virtual="/inc/layout/footer.html" -->
+  </div>
+  <script src="/assets/js/index.js"></script>
+</body>
+</html>

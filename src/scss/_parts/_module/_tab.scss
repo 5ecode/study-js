@@ -1,0 +1,58 @@
+@use "../../setting" as *;
+
+.m-{
+  &tabNav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom:-3px;
+    &_item{
+      position: relative;
+      width: calc(50% - 3px);
+      padding: 5px 1em 6px;
+      border: solid $mainColor;
+      border-radius: 3px 3px 0 0;
+      border-width: 2px 2px 0 2px;
+      cursor: pointer;
+      background: #fff;
+      text-align: center;
+      transition: .5s;
+      -webkit-appearance: none;
+      &.is-active{
+        border-bottom-color: $mainColor;
+        background: $mainColor;
+        cursor: default;
+      }
+    }
+  }
+  &tabContent{
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 0;
+    background: $mainColor;
+    border: 1px solid $mainColor;
+    border-radius: 0 0 3px 3px;
+    &.is-active{
+      display: block;
+      position: relative;
+      z-index: 1;
+      opacity: 1;
+      height: auto;
+      padding: 1em;
+    }
+    &_inner{
+      opacity: 0;
+      padding: 1em;
+      background: #fff;
+      pointer-events: none;
+      transition: .3s ease;
+      .is-active &{
+        opacity: 1;
+        pointer-events: auto
+      }
+    }
+  }
+}
+
+

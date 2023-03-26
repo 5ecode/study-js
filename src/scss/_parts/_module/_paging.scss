@@ -1,0 +1,66 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+  module : ページ送り
+----------------------------------------------------------------------*/
+%arwCommon{
+  @include arrow($size:10px, $border-width:2px, $color:#b9c9c9);
+}
+.m-{
+  &paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    &_prev,
+    &_next{
+      position: absolute;
+      line-height: 1;
+    }
+    &_prev{
+      left: 0;
+      &::before{
+        margin-right: 10px;
+        @extend %arwCommon;
+        border-width: 0 0 2px 2px;
+      }
+      &:hover{
+        &::before{
+          transition: color .3s ease;
+          color: $mainColor;
+        }
+      }
+    }
+    &_next {
+      right: 0;
+      &::after{
+        margin-left: 10px;
+        @extend %arwCommon;
+      }
+      &:hover{
+        &::after{
+          transition: color .3s ease;
+          color: $mainColor;
+        }
+      }
+    }
+    &_page{
+      display: inline-flex;
+      justify-content: center;
+      min-width: 30px;
+      padding: 0 5px;
+      border-bottom: 2px solid #b9c9c9;
+      text-align: center;
+      transition: border-color .3s ease;
+      &:hover{
+        border-color: $mainColor;
+      }
+    }
+    .is-inactive{
+      opacity: .5;
+      pointer-events: none;
+    }
+  }
+}

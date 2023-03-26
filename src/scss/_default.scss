@@ -1,0 +1,154 @@
+@charset 'utf-8';
+@use "setting" as *;
+/*--------------------------------------------------------------------
+  @サイト全体
+----------------------------------------------------------------------*/
+/* base
+--------------------------------------------------*/
+/* A Modern CSS Reset */
+*{box-sizing:border-box}ul,ol{padding:0}body,h1,h2,h3,h4,h5,h6,p,ul,ol,figure,blockquote,dl,dd{margin:0}body{min-height:100vh;scroll-behavior:smooth;text-rendering:optimizeSpeed;line-height:1.5}ul,ol{list-style:none}a:not([class]){text-decoration-skip-ink:auto}img{max-width:100%;display:block}input,button,textarea,select{font:inherit}img:not([alt]){filter:blur(10px)}@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+
+/* CSS Remedy */
+hr{border-style:solid;border-width:1px 0 0;color:inherit;height:0;overflow:visible}
+
+/* html
+--------------------------------------------------*/
+html{
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &.is-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+  }
+}
+
+/* body
+--------------------------------------------------*/
+body{
+  min-width: 320px;
+  color: $baseColor;
+  font-size: 1.6rem;
+  font-family: Noto Sans JP,"Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* hedding
+--------------------------------------------------*/
+h1{
+  font-size: 2.8rem;
+}
+h2{
+  font-size: 2.4rem;
+}
+h3{
+  font-size: 2.2rem;
+}
+h4{
+  font-size: 2rem;
+}
+h5{
+  font-size: 1.8rem;
+}
+h6{
+  font-size: 1.6rem;
+}
+
+/* link
+--------------------------------------------------*/
+a{
+  position: relative;
+  color: $baseColor;
+  text-decoration: none;
+  background-color: transparent;
+  &:active,
+  &:hover{
+    outline-width: 0;
+  }
+}
+
+/* button
+--------------------------------------------------*/
+button{
+  padding: 0 5px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+/* text
+--------------------------------------------------*/
+em{
+  font-style: normal;
+}
+sup,sub{
+  position: relative;
+  font-size: 65%;
+  line-height: 0;
+  vertical-align: middle;
+}
+sup{
+  top: -4px;
+}
+sub{
+  top: 0;
+}
+
+/* pre
+--------------------------------------------------*/
+pre{
+  overflow: auto;
+  padding: 20px;
+  border: 1px solid #b9c9c9;
+  background: #fefbec;
+  font-family: Consolas, monospace, sans-serif;
+  font-size: 1.8rem;
+  white-space: pre-wrap;
+}
+
+/* table
+--------------------------------------------------*/
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+td,
+th{
+  word-break: break-word;
+}
+caption{
+  text-align: left;
+}
+
+/* form
+--------------------------------------------------*/
+label{
+  cursor: pointer;
+}
+input,
+button,
+textarea,
+select{
+  position: relative;
+  outline-color: $mainColor;
+}
+input[type="text"]{
+  border-width: 1px;
+}
+input[type="text"],
+select{
+  line-height: 1;
+}
+
+/* list
+--------------------------------------------------*/
+ul,
+ol{
+  list-style-position: inside;
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+  structure : 下部追従
+----------------------------------------------------------------------*/
+.st-{
+  &flowFoot{
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 1px 1px -1px $baseColor inset;
+  }
+}

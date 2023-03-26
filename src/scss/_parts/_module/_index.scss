@@ -1,0 +1,9 @@
+/*
+*@Module
+*2つ以上の要素で構成され、機能的なひとかたまりを1セットとして使用する部品群。
+*要素のばら売りはできないが、componentを構成要素として含めることもできる。
+*/
+
+@forward "carousel";
+@forward "tab";
+@forward "modalpanel";

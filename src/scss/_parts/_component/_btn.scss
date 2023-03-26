@@ -1,0 +1,18 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+   Component : ボタン
+----------------------------------------------------------------------*/
+.c-{
+  &btn{
+    @include btnReset;
+    padding: 0 34px;
+    border: 1px solid $mainColor;
+    background: $mainColor;
+    color: #fff;
+    @include hover{
+      background: #fff;
+      color: $mainColor;
+    }
+  }
+}

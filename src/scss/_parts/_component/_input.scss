@@ -1,0 +1,46 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+  @Component : フォームアイテム
+----------------------------------------------------------------------*/
+.c-{
+  &input,
+  &select{
+    width: 100%;
+    border: 1px solid $baseColor;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 1.6rem;
+  }
+  &input:not(textarea),
+  &select{
+    height: 40px;
+  }
+  &input{
+    padding: 10px;
+    &::-webkit-input-placeholder{
+      color: rgba(153,153,153,1);
+    }
+    &:-ms-input-placeholder{
+      color: rgba(153,153,153,1);
+    }
+    &::-moz-placeholder{
+      color: rgba(153,153,153,1);
+    }
+    &[data-size="100"]{
+      width: 100px;
+    }
+    &[data-size="200"]{
+      width: 200px;
+    }
+    &[disabled="disabled"]{
+      background: #fff;
+    }
+  }
+  &select{
+    padding-left: 10px;
+    &::-ms-expand {
+      margin-left: 10px;
+    }
+  }
+}

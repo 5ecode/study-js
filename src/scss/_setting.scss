@@ -1,0 +1,130 @@
+@charset 'utf-8';
+/* --------------------------------------------------------------------
+  @変数
+---------------------------------------------------------------------- */
+/* Media Queries */
+$breakpoints: (
+  sm: 'screen and (max-width: 428px)',
+  md: 'screen and (max-width: 768px)'
+);
+
+/* 色 */
+$baseColor: #2c3e50;
+$mainColor: #53c0d3;
+$subColor: #4d7dc5;
+$linkColor: #00a7a7;
+
+/* --------------------------------------------------------------------
+  @function
+---------------------------------------------------------------------- */
+/* レスポンシブ%値 */
+@function percent($size, $viewport: 750) {
+  $rate: calc($size / $viewport);
+  @return $rate * 100%;
+}
+
+/* --------------------------------------------------------------------
+  @mixin
+---------------------------------------------------------------------- */
+/* メディアクエリ 例：@include mq(md){};*/
+@mixin mq($bp) {
+  @media #{map-get($breakpoints, $bp)} {
+   @content;
+  }
+}
+
+/* ボタンリセット */
+@mixin btnReset{
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* マウスオーバー */
+@mixin hover {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+/* hover opacity 例：@include alpha(.8); */
+@mixin alpha($param:.5){
+  transition: opacity .3s ease;
+  @include hover{
+    opacity: $param;
+  }
+}
+
+/* 矢印 例：@include arrow(9px, 2px, #fff);*/
+@mixin arrow($size:4px, $border-width:2px, $color:null){
+  display: inline-block;
+  transform: rotate(45deg);
+  width: $size;
+  height: $size;
+  border-width: $border-width $border-width 0 0;
+  border-style: solid;
+  color: $color;
+  content: "";
+}
+
+/* 格子レイアウト 例：@include flexGrid(-15px);*/
+@mixin flexGrid($margin:null) {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $margin;
+  > *{
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+/* 格子レイアウトflexItem 例：@include flexItemCell(4, 10px);*/
+@mixin flexItemCell($cell:null,$margin:10px) {
+  @if $cell == 1{
+    max-width: calc((100% / 12) - $margin);
+  }
+  @if $cell == 2{
+    max-width: calc((100% / 6) - $margin);
+  }
+  @if $cell == 3{
+    max-width: calc((100% / 4) - $margin);
+  }
+  @if $cell == 4{
+    max-width: calc((100% / 3) - $margin);
+  }
+  @if $cell == 5{
+    max-width: calc(((100% / 12) * 5) - $margin);
+  }
+  @if $cell == 6{
+    max-width: calc((100% / 2 - $margin));
+  }
+  @if $cell == 8{
+    max-width: calc(((100% / 12) * 8) - $margin);
+  }
+  @if $cell == 9{
+    max-width: calc(((100% / 12) * 9) - $margin);
+  }
+  @if $cell == 10{
+    max-width: calc(((100% / 12) * 10) - $margin);
+  }
+  @if $cell == 11{
+    max-width: calc(((100% / 12) * 11) - $margin);
+  }
+}
+
+/* キーフレーム 例：@include keyframes(menu-bar01);*/
+@mixin keyframes($animation-name: animaton){
+  @keyframes #{$animation-name}{
+    @content;
+  }
+}
+
+/* アニメーション 例：@include animation(menu-bar01 .75s forwards);*/
+@mixin animation($animation-name){
+  animation: $animation-name;
+}

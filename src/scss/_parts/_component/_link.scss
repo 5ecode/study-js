@@ -1,0 +1,27 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+  @Component : リンク
+----------------------------------------------------------------------*/
+.c-{
+  &txtLink{
+    color: $linkColor;
+    text-decoration: underline;
+    transition: background .3s ease;
+    @include hover{
+      background: #dbf4f4;
+    }
+  }
+  &linkMark{
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    @include alpha(.5);
+    &::before{
+      position: absolute;
+      top: calc(1em / 2);
+      left: 0;
+      @include arrow($size:5px, $border-width:2px, $color:#3b3938);
+    }
+  }
+}

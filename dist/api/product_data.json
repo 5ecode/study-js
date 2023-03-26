@@ -1,0 +1,312 @@
+ [
+  {
+    "id": 0,
+    "img": "",
+    "type": "0～6",
+    "category": "すべて",
+    "name": "商品名",
+    "price": "定価",
+    "sale": "割引率or[false]",
+    "new" : "[ture]or[false]"
+  },
+  {
+    "id": 1,
+    "img": "test_img_cutsewn01.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 リブ半袖カットソー",
+    "price": 1200,
+    "sale": 10,
+    "new" : false
+  },
+  {
+    "id": 2,
+    "img": "test_img_shoes01.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 ショートブーツ",
+    "price": 2500,
+    "sale": false,
+    "new" : true
+  },
+  {
+    "id": 3,
+    "img": "test_img_shoes11.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 スニーカー（黒）",
+    "price": 4500,
+    "sale": 20,
+    "new" : true
+  },
+  {
+    "id": 4,
+    "img": "test_img_shoes14.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 スリッポン",
+    "price": 1700,
+    "sale": false,
+    "new" : false
+  },
+  {
+    "id": 5,
+    "img": "test_img_cutsewn02.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 半袖プリントTシャツ（ブルー）",
+    "price": 1800,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 6,
+    "img": "test_img_cutsewn05.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 半袖プリントTシャツ（ピンク）",
+    "price": 1600,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 7,
+    "img": "test_img_shirt02.png",
+    "type": 1,
+    "category": "シャツ",
+    "name": "これは商品名 Yシャツ",
+    "price": 3100,
+    "sale": false,
+    "new" : false
+  },
+  {
+    "id": 8,
+    "img": "test_img_shoes10.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 安全靴（ブラック）",
+    "price": 6000,
+    "sale": 15,
+    "new" : false
+  },
+  {
+    "id": 9,
+    "img": "test_img_shoes09.png",
+    "type": 6,
+    "category": "靴",
+    "price": 1200,
+    "name": "これは商品名 ハイヒール",
+    "sale": 10,
+    "new" : false
+  },
+  {
+    "id": 10,
+    "img": "test_img_skirt02.png",
+    "type": 4,
+    "category": "スカート",
+    "name": "これは商品名 キュロットスカート",
+    "price": 2500,
+    "sale": false,
+    "new" : false
+  },
+  {
+    "id": 11,
+    "img": "test_img_shoes08.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 スリッポンスニーカー",
+    "price": 4500,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 12,
+    "img": "test_img_shoes12.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 ポインテッドトゥパンプス",
+    "price": 1780,
+    "sale": false,
+    "new" : false
+  },
+  {
+    "id": 13,
+    "img": "test_img_pants01.png",
+    "type": 5,
+    "category": "パンツ",
+    "name": "これは商品名 ゆるフィットワイドパンツ（緑）",
+    "price": 1620,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 14,
+    "img": "test_img_cutsewn07.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 無地カットソー",
+    "price": 1620,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 15,
+    "img": "test_img_shoes07.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 フィットスリッポン",
+    "price": 3250,
+    "sale": false,
+    "new" : true
+  },
+  {
+    "id": 16,
+    "img": "test_img_shirt05.png",
+    "type": 1,
+    "category": "シャツ",
+    "name": "これは商品名 高めのシャツ",
+    "price": 10000,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 17,
+    "img": "test_img_shirt03.png",
+    "type": 1,
+    "category": "シャツ",
+    "name": "これは商品名 白シャツ",
+    "price": 1620,
+    "sale": 10,
+    "new" : false
+  },
+  {
+    "id": 18,
+    "img": "test_img_cutsewn06.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 Kids 半袖Tシャツ",
+    "price": 1440,
+    "sale": 10,
+    "new" : false
+  },
+  {
+    "id": 19,
+    "img": "test_img_shirt01.png",
+    "type": 1,
+    "category": "シャツ",
+    "name": "これは商品名 安いシャツ",
+    "price": 980,
+    "sale": false,
+    "new" : false
+  },
+  {
+    "id": 20,
+    "img": "test_img_onepiece01.png",
+    "type": 3,
+    "category": "ワンピース",
+    "name": "これは商品名 厚手シンプルワンピース",
+    "price": 6000,
+    "sale": 20,
+    "new" : true
+  },
+  {
+    "id": 21,
+    "img": "test_img_shoes06.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 シンプルスニーカー",
+    "price": 2270,
+    "sale": 15,
+    "new" : false
+  },
+  {
+    "id": 22,
+    "img": "test_img_shoes05.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 カジュアルブーツ",
+    "price": 2500,
+    "sale": false,
+    "new" : true
+  },
+  {
+    "id": 23,
+    "img": "test_img_shoes04.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 楽々シューズ",
+    "price": 4500,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 24,
+    "img": "test_img_skirt01.png",
+    "type": 4,
+    "category": "スカート",
+    "name": "これは商品名 ひらひらスカート",
+    "price": 1620,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 25,
+    "img": "test_img_shoes13.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 ハイカットスニーカー（Black）",
+    "price": 1520,
+    "sale": 10,
+    "new" : false
+  },
+  {
+    "id": 26,
+    "img": "test_img_shirt04.png",
+    "type": 1,
+    "category": "シャツ",
+    "name": "これは商品名 長袖シャツ",
+    "price": 3250,
+    "sale": 15,
+    "new" : false
+  },
+  {
+    "id": 27,
+    "img": "test_img_cutsewn04.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 クルーネックTシャツ（車）",
+    "price": 6000,
+    "sale": 20,
+    "new" : true
+  },
+  {
+    "id": 28,
+    "img": "test_img_shoes03.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 紐なしスニーカー",
+    "price": 999,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 29,
+    "img": "test_img_cutsewn03.png",
+    "type": 2,
+    "category": "カットソー",
+    "name": "これは商品名 クルーネックTシャツ（花）",
+    "price": 1200,
+    "sale": 20,
+    "new" : false
+  },
+  {
+    "id": 30,
+    "img": "test_img_shoes02.png",
+    "type": 6,
+    "category": "靴",
+    "name": "これは商品名 ピンヒールパンプス",
+    "price": 19500,
+    "sale": false,
+    "new" : false
+  }
+]

@@ -1,0 +1,44 @@
+@charset "utf-8";
+@use "../../setting" as *;
+/*--------------------------------------------------------------------
+  @Component : リスト
+----------------------------------------------------------------------*/
+@at-root{
+  %listCommonPl{
+    padding-left: 1.5em;
+  }
+}
+.c-{
+  &dotList{
+    @extend %listCommonPl;
+    >*{
+      text-indent: -1em;
+      &::before{
+        display: inline-block;
+        transform: translateX(.64em);
+        width: 1em;
+        height: 1em;
+        content: '・'
+      }
+    }
+  }
+  &discList{
+    @extend %listCommonPl;
+    list-style-type: disc;
+  }
+  &decimalList{
+    @extend %listCommonPl;
+    counter-reset:li;
+    list-style-type: decimal;
+  }
+  &alphaList{
+    @extend %listCommonPl;
+    list-style-type: lower-alpha;
+  }
+  &definitionList{
+    > dt{
+      margin-top: 1em;
+    }
+  }
+}
+

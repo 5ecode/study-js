@@ -1,0 +1,18 @@
+/*
+@Component
+*単体で機能を満たす小さな部品。
+*見出しやボタン、カスタムされたラジオボタンやチェックボックス、フォームの入力欄、リスト、表組など、
+*自身を構成する中に部品として取り出せる要素を持たないもの。
+*/
+
+@forward "input";
+@forward "link";
+@forward "list";
+@forward "ttl";
+@forward "table";
+@forward "btn";
+
+
+
+
+
