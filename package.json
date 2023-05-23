@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack serve",
     "css:sass": "sass src/scss:dist/assets/css --style=compressed --no-source-map --error-css",
     "css": "npm-run-all -s css:*",
     "js": "webpack",
