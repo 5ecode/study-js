@@ -1,8 +1,8 @@
 'use strict';
 /*----------------------------------------------------------------------
-@callApiModule
+@CallApiModule
 ----------------------------------------------------------------------*/
-export class callApiModule {
+export class CallApiModule {
   constructor(data) {
     this.data = data;
   }

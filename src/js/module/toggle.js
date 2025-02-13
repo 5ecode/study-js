@@ -1,8 +1,8 @@
 'use strict';
 /*----------------------------------------------------------------------
-@toggleModule
+@ToggleModule
 ----------------------------------------------------------------------*/
-export class toggleModule {
+export class ToggleModule {
   constructor(stage) {
     this.stage = stage;
     this.targets = this.stage.querySelectorAll('details');
@@ -23,7 +23,7 @@ export class toggleModule {
     this.targets.forEach(function(target){
       target.addEventListener('toggle', e => {
         if (e.target.open) {
-        if (this.activeElm !== null) this.activeElm.open = false;
+          if (this.activeElm !== null) this.activeElm.open = false;
           this.activeElm = e.target;
         } else {
           if (this.activeElm === e.target) this.activeElm = null;

@@ -2,10 +2,10 @@
 /*----------------------------------------------------------------------
 @tabModule
 ----------------------------------------------------------------------*/
-export class tablModule {
+export class TablModule {
   constructor(stage) {
     this.stage = stage;
-    this.trigger = this.stage.querySelectorAll("[data-tabid]");
+    this.trigger = this.stage.querySelectorAll('[data-tabid]');
     this.target = this.stage.querySelectorAll('[data-tab="body"]');
     this.activeClass = "is-active";
   }

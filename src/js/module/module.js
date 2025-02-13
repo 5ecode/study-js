@@ -15,11 +15,11 @@ export class ResizeManager {
 
       if (timer) return;
       timer = setTimeout(() => {
-       if (lastInnerWidth != window.innerWidth) {
+        if (lastInnerWidth != window.innerWidth) {
           timer = 0;
           this.action();
           lastInnerWidth = window.innerWidth;
-       }
+        }
       }, 500);
     });
   }

@@ -1,15 +1,14 @@
-import { carouselModule, loopSlide, oneSideSlide, loopCrossFade} from './module/carousel.js';
-import { tablModule } from './module/tab.js';
-import { modalModule } from './module/modal.js';
-import { observerModule } from './module/observer.js';
-import { toggleModule } from './module/toggle.js';
-import { callApiModule } from './module/callapi.js';
-
+import { CarouselModule, LoopSlide, OneSideSlide, LoopCrossFade} from './module/carousel.js';
+import { TablModule } from './module/tab.js';
+import { ModalModule } from './module/modal.js';
+import { ObserverModule } from './module/observer.js';
+import { ToggleModule } from './module/toggle.js';
+import { CallApiModule } from './module/callapi.js';
 
 /*----------------------------------------------------------------------
 @非同期処理
 ----------------------------------------------------------------------*/
-class apiUsersList extends callApiModule {
+class ApiUsersList extends CallApiModule {
   constructor(data) {
     super(data);
     this.tax = 10;
@@ -63,7 +62,7 @@ class apiUsersList extends callApiModule {
     }
 
     const slideStage = document.getElementById('apiLateralMotion');
-    const imgListSlide = new apiSideSlide(slideStage);
+    const imgListSlide = new ApiSideSlide(slideStage);
     imgListSlide.init();
   }
 
@@ -79,7 +78,7 @@ class apiUsersList extends callApiModule {
 /*----------------------------------------------------------------------
 @apiスライド
 ----------------------------------------------------------------------*/
-class apiSideSlide extends carouselModule{
+class ApiSideSlide extends CarouselModule{
   constructor(target) {
     super(target);
     this.pointerType = 'num';
@@ -102,39 +101,40 @@ class apiSideSlide extends carouselModule{
   const slideStage = document.getElementById('lateralMotion'),
     slideStage2 = document.getElementById('loopLateralMotion'),
     slideStage3 = document.getElementById('CrossFadeShow');
-  const slideSet = new oneSideSlide(slideStage);
+  const slideSet = new OneSideSlide(slideStage);
   slideSet.init();
-  const slideSet2 = new loopSlide(slideStage2);
+  const slideSet2 = new LoopSlide(slideStage2);
   slideSet2.init();
-  const slideSet3 = new loopCrossFade(slideStage3);
+  const slideSet3 = new LoopCrossFade(slideStage3);
   slideSet3.init();
 
   // タブコンテンツ
   const tabStage = document.getElementById('tabContents');
-  const tabSet = new tablModule(tabStage);
+  const tabSet = new TablModule(tabStage);
   tabSet.init();
 
   // モーダル
-  const modalSet = new modalModule();
+  const modalSet = new ModalModule();
   modalSet.init();
 
   // 開閉表示
   const toggleStage1 = document.getElementById('toggleContents1');
-  const toggleSet1 = new toggleModule(toggleStage1);
+  const toggleSet1 = new ToggleModule(toggleStage1);
   toggleSet1.oneEach();
   const toggleStage2 = document.getElementById('toggleContents2');
-  const toggleSet2 = new toggleModule(toggleStage2);
+  const toggleSet2 = new ToggleModule(toggleStage2);
   toggleSet2.folding();
   const toggleStage3 = document.getElementById('toggleContents3');
-  const toggleSet3 = new toggleModule(toggleStage3);
+  const toggleSet3 = new ToggleModule(toggleStage3);
   toggleSet3.oneEachFolding();
 
   // スクロールアクション
   const observerStage = document.getElementById('scrollAnimation');
-  const observerSet = new observerModule(observerStage);
+  const observerSet = new ObserverModule(observerStage);
   observerSet.init();
 
   // api
-  const apiSet = new apiUsersList('/api/product_data.json');
-  apiSet.init()
+  const apiSet = new ApiUsersList('/api/product_data.json');
+  apiSet.init();
+
 })();

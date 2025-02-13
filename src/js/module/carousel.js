@@ -2,9 +2,9 @@
 import { ResizeManager } from './module';
 
 /*----------------------------------------------------------------------
-@carouselModule
+@CarouselModule
 ----------------------------------------------------------------------*/
-export class carouselModule {
+export class CarouselModule {
   constructor(target) {
     this.target = target;
     this.elName = this.target.dataset.slide;
@@ -384,7 +384,7 @@ export class carouselModule {
 /*----------------------------------------------------------------------
 @片道スライド
 ----------------------------------------------------------------------*/
-class oneSideSlide extends carouselModule{
+class OneSideSlide extends CarouselModule{
   constructor(target) {
     super(target);
   }
@@ -401,7 +401,7 @@ class oneSideSlide extends carouselModule{
 /*----------------------------------------------------------------------
 @ループスライド
 ----------------------------------------------------------------------*/
-class loopSlide extends carouselModule{
+class LoopSlide extends CarouselModule{
   constructor(target) {
     super(target);
     this.loop = true;
@@ -419,7 +419,7 @@ class loopSlide extends carouselModule{
 /*----------------------------------------------------------------------
 @クロスフェードスライド
 ----------------------------------------------------------------------*/
-class loopCrossFade extends carouselModule {
+class LoopCrossFade extends CarouselModule {
   constructor(target) {
     super(target);
     this.fade = true;
@@ -441,4 +441,4 @@ class loopCrossFade extends carouselModule {
   } //currentPlace
 }
 
-export { loopSlide, oneSideSlide, loopCrossFade };
+export { LoopSlide, OneSideSlide, LoopCrossFade };
