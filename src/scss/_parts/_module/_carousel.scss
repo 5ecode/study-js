@@ -22,6 +22,10 @@
     }
     &_item{
       flex: 0 0 100%;
+      > a:focus-visible{
+        display: block;
+        outline-offset: -4px;
+      }
     }
     &_pointer{
       display: flex;
@@ -31,12 +35,18 @@
       left: 50%;
       z-index: 5;
       transform: translateX(-50%);
+      @include mq(sm){
+        position: static;
+        transform: none;
+        margin-top: 10px;
+      }
     }
     &_dot{
       display: block;
       width: 12px;
       height: 12px;
       margin: 0 10px;
+      border: none;
       border-radius: 24px;
       background: #ccc;
       letter-spacing: normal;
@@ -45,8 +55,17 @@
       &.is-current{
         background: #00509f;
       }
+      &:focus-visible{
+        outline: 1px solid #00509f;
+        outline-offset: 3px;
+      }
       @include hover{
         background: #00509f;
+      }
+      @include mq(sm){
+        width: 10px;
+        height: 10px;
+        margin: 0 6px;
       }
     }
     &_num{
@@ -75,8 +94,9 @@
       top: 50%;
       cursor: pointer;
       z-index: 5;
-      @include arrow(38px, 9px, #fff);
       margin-top: -18px;
+      @include arrow(38px, 9px, #fff);
+      background: none;
       transition: opacity .3s cubic-bezier(.215, .610, .355, 1);
       &._prev{
         left: 39px;
@@ -88,6 +108,13 @@
       &.is-inactive{
         opacity: 0;
         cursor: default;
+      }
+      &:focus-visible{
+        outline: 1px solid #00509f;
+        outline-offset: 3px;
+      }
+      @include mq(sm){
+        display: none;
       }
     }
     [data-type="fade"] &{

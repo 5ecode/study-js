@@ -17,7 +17,7 @@
       background: #fff;
       text-align: center;
       transition: .5s;
-      -webkit-appearance: none;
+      appearance: none;
       &.is-active{
         border-bottom-color: $mainColor;
         background: $mainColor;

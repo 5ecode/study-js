@@ -3,6 +3,40 @@
 /* --------------------------------------------------------------------
   @JavaScript
 ---------------------------------------------------------------------- */
+/* 上書き
+--------------------------------------------------*/
+.apiSlide{
+  .m-carousel{
+    &_control{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding-top: 30px;
+    }
+    &_shiftBtn{
+      position: static;
+      z-index: 5;
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      border-width: 2px 2px 0 0;
+      color: $mainColor;
+      &._next{
+        order: 3;
+      }
+      &.is-inactive{
+        opacity: 1;
+        color: #cadbdb;
+      }
+    }
+    &_pointer{
+      position: static;
+      transform: none;
+    }
+  }
+}
+
 /* 折り畳み
 --------------------------------------------------*/
 .toggleUnit{
@@ -19,7 +53,11 @@
   width: 100%;
   padding: 10px 60px 10px 20px;
   background: $mainColor;
+  list-style: none;
   cursor: pointer;
+  &::-webkit-details-marker {
+    display:none;
+  }
   &::before,
   &::after {
     position: absolute;
@@ -85,6 +123,9 @@
   > *{
     @include flexItemCell(2,percent(12,768));
     margin: percent(10,768) percent(6,768);
+    @include mq(sm){
+      @include flexItemCell(4,percent(12,768));
+    }
   }
 }
 .product{
@@ -118,37 +159,6 @@
     line-height: 1;
     > span {
       font-size: 1rem;
-    }
-  }
-}
-.apiSlide{
-  .m-carousel{
-    &_control{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      padding-top: 30px;
-    }
-    &_shiftBtn{
-      position: static;
-      z-index: 5;
-      width: 18px;
-      height: 18px;
-      margin: 0;
-      border-width: 2px 2px 0 0;
-      color: $mainColor;
-      &._next{
-        order: 3;
-      }
-      &.is-inactive{
-        opacity: 1;
-        color: #cadbdb;
-      }
-    }
-    &_pointer{
-      position: static;
-      transform: none;
     }
   }
 }

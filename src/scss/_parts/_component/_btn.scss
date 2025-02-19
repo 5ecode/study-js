@@ -5,11 +5,16 @@
 ----------------------------------------------------------------------*/
 .c-{
   &btn{
-    @include btnReset;
+    display: block;
     padding: 0 34px;
     border: 1px solid $mainColor;
     background: $mainColor;
     color: #fff;
+    appearance: none;
+    &:focus-visible{
+      outline: 1px solid #fff;
+      outline-offset: -3px;
+    }
     @include hover{
       background: #fff;
       color: $mainColor;

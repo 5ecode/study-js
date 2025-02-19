@@ -23,13 +23,13 @@
           </div>
 
           <div class="u-mb2">
-            <h3 class="c-ttlType02 u-mb1">片道スライダー</h3>
+            <h3 id="oneWaySlider" class="c-ttlType02 u-mb1">片道スライダー</h3>
             <dl class="u-mb2">
               <dt class="u-fontB">仕様</dt>
               <dd class="u-mb1">
                 <ul class="c-dotList">
                   <li>レスポンシブ対応。</li>
-                  <li>prevとnextボタンで前後に進めるが、前後のあるときだけ対応するボタンを表示。</li>
+                  <li>prevとnextボタンで前後に進めるが、前後のあるときだけ対応するボタンを表示（PCのみ）。</li>
                   <li>カレントポインターで見たい順番にスキップができる。</li>
                   <li>マウス操作、フリック・スワイプ操作可能（スライドする要素にリンクがあっても可）</li>
                 </ul>
@@ -37,17 +37,19 @@
               <dt class="u-fontB">制作条件</dt>
               <dd class="u-mb1">ひな型のカルーセルクラスを継承して、片道スライダーのサブクラスをつくる。</dd>
             </dl>
-            <div id="lateralMotion" class="m-carousel" data-slide="m-carousel">
+            <div id="lateralMotion" class="m-carousel" data-slide="m-carousel" aria-labelledby="oneWaySlider">
               <div class="m-carousel_view">
                 <div class="m-carousel_move">
                   <div class="m-carousel_item">
                     <img src="/assets/images/carousel_img01.png" alt="">
                   </div>
                   <div class="m-carousel_item">
-                    <img src="/assets/images/carousel_img02.png" alt="">
+                    <a href="https://github.com/5ecode/demo-site" aria-label="デモサイトリンク">
+                      <img src="/assets/images/carousel_img02.png" alt="">
+                    </a>
                   </div>
                   <div class="m-carousel_item">
-                    <a href="https://github.com/5ecode/demo-site">
+                    <a href="https://github.com/5ecode/demo-site" aria-label="デモサイトリンク">
                       <img src="/assets/images/carousel_img03.png" alt="">
                     </a>
                   </div>
@@ -64,7 +66,7 @@
                 <ul class="c-dotList">
                   <li>レスポンシブ対応。</li>
                   <li>自動でループさせる。</li>
-                  <li>prevとnextボタンで前後に進める。</li>
+                  <li>prevとnextボタンで前後に進める（PCのみ）。</li>
                   <li>カレントポインターで見たい順番にスキップができる。</li>
                   <li>マウス操作、フリック・スワイプ操作可能（スライドする要素にリンクがあっても可）</li>
                 </ul>
@@ -141,9 +143,9 @@
               <dd>chromeでのみ、内容量の多いモーダルコンテンツがぼやける現象を確認。原因調査中。</dd>
             </dl>
             <button class="c-btn" data-trigger="modal" aria-controls="modalPanel01">モーダルを開く</button>
-            <button class="c-btn" data-trigger="modal" aria-controls="modalPanel02">モーダルを開く</button>
-            <div id="modalPanel01" class="m-modalPanel" data-body="modal">
-              <div class="m-modalPanel_inner">
+            <button class="c-btn u-mt1" data-trigger="modal" aria-controls="modalPanel02">モーダルを開く</button>
+            <div id="modalPanel01" class="m-modalPanel" aria-hidden="true" role="dialog" aria-modal="true">
+              <div class="m-modalPanel_inner" role="document">
                 <button class="m-modalPanel_btn" data-modal="close">close</button>
                 <h4 class="c-ttlType04">モーダルパネル</h4>
                 <div class="u-mb2">
@@ -152,8 +154,8 @@
                 </div>
               </div>
             </div>
-            <div id="modalPanel02" class="m-modalPanel" data-body="modal">
-              <div class="m-modalPanel_inner">
+            <div id="modalPanel02" class="m-modalPanel" aria-hidden="true" role="dialog" aria-modal="true">
+              <div class="m-modalPanel_inner" role="document">
                 <button class="m-modalPanel_btn" data-modal="close">close</button>
                 <h4 class="c-ttlType04">モーダルパネル</h4>
                 <div class="u-mb2">
@@ -333,3 +335,4 @@
   <script src="/assets/js/index.js"></script>
 </body>
 </html>
+

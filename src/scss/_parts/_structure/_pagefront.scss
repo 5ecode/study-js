@@ -25,16 +25,15 @@
       text-align: center;
       color: $subColor;
       font-family: "Verdana";
-      font-size: 100px;
+      font-size: clamp(48px, 14vw, 100px);
       font-weight: bold;
       line-height: 1.2;
       &::before{
         display: block;
         position: fixed;
         opacity: .1;
-        width: calc(100% * (768 / 1024) - 20px);
-        max-width: 1080px;
-        min-width: 748px;
+        width: calc(100% - 40px);
+        max-width: 1060px;
         text-align: center;
         content: attr(data-ttl);
       }

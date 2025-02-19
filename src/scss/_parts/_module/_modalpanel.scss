@@ -50,13 +50,6 @@
     }
     @include mq(md){
       max-width: 960px;
-      &_inner{
-        padding: 65px 40px 40px;
-      }
-      &_btn{
-        top: 20px;
-        right: 50px;
-      }
     }
   }
 }

@@ -14,6 +14,9 @@ $mainColor: #53c0d3;
 $subColor: #4d7dc5;
 $linkColor: #00a7a7;
 
+/* フォントサイズ */
+$rootFontSz: 16;
+
 /* --------------------------------------------------------------------
   @function
 ---------------------------------------------------------------------- */
@@ -29,17 +32,20 @@ $linkColor: #00a7a7;
 /* メディアクエリ 例：@include mq(md){};*/
 @mixin mq($bp) {
   @media #{map-get($breakpoints, $bp)} {
-   @content;
+    @content;
   }
 }
+
+// フォントrem 例：font-size: rem(40)
+@function rem($px) {
+  @return calc($px / $rootFontSz) * 1rem;
+}
+
 
 /* ボタンリセット */
 @mixin btnReset{
   border: none;
   background: none;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
